@@ -1,0 +1,37 @@
+---
+title: "Homework 1 Markdown"
+author: "Samuel Guzman"
+date: "9/13/2020"
+output: html_document
+---
+1. Load quakes with data(quakes). 
+   Show what's there with str()...:
+```{r first_chunk}
+data(quakes)
+str(quakes)
+```
+   ...and summary:
+```{r second_chunk}
+summary(quakes)
+```
+2. Show the entirity of the column long.
+```{r third_chunk}
+quakes[ , "long"]
+```
+3. Try using the function unique() applied to a vector.
+```{r fourth_chunk}
+my_vec <- c(1, 2, 2, 3, 3, 4)
+unique(my_vec)
+```
+What unique stations are there?
+```{r fifth_chunk}
+unique(quakes[ , "stations"])
+```
+Use length() with unique() to determine how many stations there are.
+```{r sixth_chunk}
+length(unique(quakes[ , "stations"]))
+```
+4. Using range()what is the range of depths where quakes occur?
+```{r seventh_chunk}
+range(quakes[ , "depth"])
+```
